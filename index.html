@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-3 has-text-centered">Open Library Finder</h1>
+
+        <!-- we’ll add the search bar here next -->
+        <div id="searchArea" class="mt-5">
+          <div class="columns is-centered">
+            <div class="column is-half">
+              <div class="field has-addons">
+                <div class="control is-expanded">
+                  <input
+                    id="searchInput"
+                    class="input"
+                    type="text"
+                    placeholder="Search by title or author..."
+                  />
+                </div>
+                <div class="control">
+                  <button id="searchBtn" class="button is-info">Search</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="has-text-centered is-size-7 has-text-grey">
+            tip: press <kbd>Enter</kbd> to search
+          </p>
+        </div>
+
+        <!-- results will go here later -->
+        <div id="results" class="mt-5"></div>
+      </div>
+    </section>
+
+    <script src="app.js" defer></script>
+  </body>
 </html>
