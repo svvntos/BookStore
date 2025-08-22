@@ -7,39 +7,46 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="section">
-      <div class="container">
-        <h1 class="title is-3 has-text-centered">Open Library Finder</h1>
+<section class="section center-viewport">
+  <div class="container has-text-centered">
+    <h1 class="title is-12-mobile is-12-tablet is-12-desktop">Stephy's Library</h1>
 
-        <!-- we’ll add the search bar here next -->
-        <div id="searchArea" class="mt-5">
-          <div class="columns is-centered">
-            <div class="column is-half">
-              <div class="field has-addons">
-                <div class="control is-expanded">
-                  <input
-                    id="searchInput"
-                    class="input"
-                    type="text"
-                    placeholder="Search by title or author..."
-                  />
-                </div>
-                <div class="control">
-                  <button id="searchBtn" class="button is-info">Search</button>
-                </div>
-              </div>
+    <div id="searchArea" class="mt-5">
+      <div class="columns is-centered">
+        <div class="column is-12-mobile is-8-tablet is-6-desktop">
+
+          <div class="field is-grouped is-grouped-centered is-flex-direction-column-mobile pill-bar">
+            <div class="control is-expanded">
+              <input
+                id="searchInput"
+                class="input is-large pill-input"
+                type="text"
+                placeholder="Search by title or author..."
+                aria-label="Search by title or author..."
+              />
+            </div>
+            <div class="control">
+              <button id="searchBtn" class="button is-large pill-btn">
+                Search
+              </button>
             </div>
           </div>
-          <p class="has-text-centered is-size-7 has-text-grey">
-            tip: press <kbd>Enter</kbd> to search
-          </p>
+
         </div>
-
-        <!-- results will go here later -->
-        <div id="results" class="mt-5"></div>
       </div>
-    </section>
 
-    <script src="app.js" defer></script>
+
+      <p class="is-size-7 has-text-grey has-text-centered mt-2">Tip: press <kbd>Enter</kbd> to search</p>
+
+
+    </div>
+
+    <div id="results" class="mt-5"></div>
+  </div>
+</section>
+
+
+
+    <script src="script.js" defer></script>
   </body>
 </html>

@@ -1,10 +1,81 @@
 @import "bulma/css/bulma.min.css";
 
-/* your custom styles here */
-#searchArea {
-	max-width: 640px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+@import "@fontsource/dancing-script/400.css";
+@import "@fontsource/dancing-script/700.css";
+
+/* Center the whole section in the viewport */
+body {
+  position: relative;  /* allow absolute positioning of ::before */
+  background: url("src/img/Bookshelfs.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
-#results { max-width: 960px; margin: 0 auto; }
+
+/* make sure your content sits above overlay */
+body * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.center-viewport {
+  min-height: 100vh;             /* full screen height */
+  display: flex;
+  align-items: center;            /* vertical center */
+  justify-content: center;        /* horizontal center */
+}
+
+/* Keep the search area comfortably narrow */
+#searchArea {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Optional: results container width */
+#results {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Optional: input sizing tweaks (Bulma already does most of this) */
+#searchInput {
+  max-width: 720px;   
+           /* let Bulma handle widths responsively */
+}
+h1.title {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 4.0rem;
+}
+
+.pill-input {
+	border-radius: 9999px 0 0 9999px;
+	padding: 1.25rem;
+}
+
+.pill-btn { 
+	border-radius: 0 9999px 9999px 0;
+	background: linear-gradient(135deg, #209cee, #3273e6);
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	transition: filter 0.2s ease, transform 0.1s ease;
+}
+.pill-btn:hover {
+	filter: brightness(1.05);
+	transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+ .pill-bar .field.is-grouped {
+   flex-direction: column;
+   align-items: stretch;
+ }
+
+
+ .pill-input .pill-btn{ 
+   border-radius: 9999px;
+   width: 100%;
+   margin-bottom: 0.5rem;
+ }
+}
