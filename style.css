@@ -3,79 +3,90 @@
 @import "@fontsource/dancing-script/400.css";
 @import "@fontsource/dancing-script/700.css";
 
-/* Center the whole section in the viewport */
 body {
-  position: relative;  /* allow absolute positioning of ::before */
   background: url("src/img/Bookshelfs.jpg") no-repeat center center fixed;
   background-size: cover;
+  filter: brightness(1.1) contrast(0.9);
 }
 
-/* make sure your content sits above overlay */
 body * {
   position: relative;
   z-index: 1;
 }
 
-
-
 .center-viewport {
-  min-height: 100vh;             /* full screen height */
+  min-height: 100vh;
   display: flex;
-  align-items: center;            /* vertical center */
-  justify-content: center;        /* horizontal center */
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
 }
 
-/* Keep the search area comfortably narrow */
 #searchArea {
   max-width: 1300px;
   margin: 0 auto;
 }
 
-/* Optional: results container width */
 #results {
   max-width: 960px;
   margin: 0 auto;
 }
 
-/* Optional: input sizing tweaks (Bulma already does most of this) */
 #searchInput {
-  max-width: 720px;   
-           /* let Bulma handle widths responsively */
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+#searchInput:focus {
+  border-color: #fff; /* change border on focus */
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25); /* subtle glow */
 }
 h1.title {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
-  font-size: 4.0rem;
+  font-size: 5rem;
+  text-align: center;
+
+  /* fill color */
+  color: #ffffff;
+
+  /* outline (choose one of these) */
+
+  /* Option 1: Modern browsers */
+  -webkit-text-stroke: 0.4px #000000;
+
+  /* Option 2: Fallback using text-shadow */
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 
 .pill-input {
-	border-radius: 9999px 0 0 9999px;
-	padding: 1.25rem;
+  border-radius: 9999px 0 0 9999px;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #4b2e03, #bbaa13);
 }
 
-.pill-btn { 
-	border-radius: 0 9999px 9999px 0;
-	background: linear-gradient(135deg, #209cee, #3273e6);
-	color: #fff;
-	font-weight: 600;
-	border: none;
-	transition: filter 0.2s ease, transform 0.1s ease;
+.pill-btn {
+  border-radius: 0 9999px 9999px 0;
+  background: linear-gradient(135deg, #af9f0d, #4b2e03);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: filter 0.2s ease, transform 0.1s ease;
 }
 .pill-btn:hover {
-	filter: brightness(1.05);
-	transform: translateY(-1px);
+  filter: brightness(1.05);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {
- .pill-bar .field.is-grouped {
-   flex-direction: column;
-   align-items: stretch;
- }
+  .pill-bar .field.is-grouped {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-
- .pill-input .pill-btn{ 
-   border-radius: 9999px;
-   width: 100%;
-   margin-bottom: 0.5rem;
- }
+  .pill-input .pill-btn {
+    border-radius: 9999px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
 }
