@@ -3,17 +3,33 @@
 @import "@fontsource/dancing-script/400.css";
 @import "@fontsource/dancing-script/700.css";
 
-body {
+body,
+body.welcome {
+  /* reuse your same background + filter so it feels consistent */
   background: url("src/img/Bookshelfs.jpg") no-repeat center center fixed;
   background-size: cover;
   filter: brightness(1.1) contrast(0.9);
+  color: #fff;
 }
-
 body * {
   position: relative;
   z-index: 1;
 }
 
+.welcome-viewport {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.welcome-card {
+  max-width: 900px;
+  width: 92%;
+  margin: 0 auto;
+  padding: 2rem 1.75rem;
+  border-radius: 16px;
+  text-align: center;
+}
 .center-viewport {
   min-height: 100vh;
   display: flex;
@@ -30,6 +46,28 @@ body * {
   max-width: 960px;
   margin: 0 auto;
 }
+.start-btn {
+  margin: 0 auto;
+  border-radius: 9999px;
+  padding: 0.9rem 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #af9f0d, #4b2e03);
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+
+}
+.start-btn:hover {
+  filter: brightness(1.05);
+  transform: translateX(-100px);
+}
+
+/* Mobile tweaks for welcome title */
+@media (max-width: 768px) {
+  body.welcome h1.title {
+    font-size: 2.75rem;
+  }
+}
 
 #searchInput {
   max-width: 720px;
@@ -40,6 +78,7 @@ body * {
   border-color: #fff; /* change border on focus */
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25); /* subtle glow */
 }
+
 h1.title {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
@@ -65,7 +104,7 @@ h1.title {
   background: linear-gradient(135deg, #4b2e03, #bbaa13);
 }
 
-.pill-btn {
+.pill-btn{
   border-radius: 0 9999px 9999px 0;
   background: linear-gradient(135deg, #af9f0d, #4b2e03);
   color: #fff;
@@ -73,7 +112,7 @@ h1.title {
   border: none;
   transition: filter 0.2s ease, transform 0.1s ease;
 }
-.pill-btn:hover {
+.pill-btn:hover, .start-btn:hover{
   filter: brightness(1.05);
   transform: translateY(-1px);
 }

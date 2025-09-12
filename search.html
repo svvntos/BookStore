@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="section center-viewport">
+      <div class="container has-text-centered">
+        <h1 class="title is-12-mobile is-12-tablet is-12-desktop">
+          Search Any Book Below
+        </h1>
+
+        <div id="searchArea" class="mt-5">
+          <div class="columns is-centered"> 
+            <div class="column is-12-mobile is-8-tablet is-6-desktop">
+              <div
+                class="field is-grouped is-grouped-centered is-flex-direction-column-mobile pill-bar"
+              >
+                <div class="control is-expanded">
+                  <input
+                    id="searchInput"
+                    class="input is-large pill-input"
+                    type="text"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </div>
+                <div class="control">
+                  <button id="searchBtn" class="button is-large pill-btn">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="is-size-7 has-text-white has-text-centered mt-2">
+            Tip: press <kbd>Enter</kbd> to search
+          </p>
+        </div>
+
+        <div id="results" class="mt-5"></div>
+      </div>
+    </section>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
