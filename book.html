@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book details in Stephy's library">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Details - Stephy's Library</title>
+  </head>
+  <body>
+    <!-- Page transition loader -->
+    <div id="pageLoader" class="page-loader">
+      <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading book...</p>
+      </div>
+    </div>
+
+    <!-- Navigation header -->
+    <nav class="book-nav">
+      <a href="index.html" class="nav-btn back-btn" aria-label="Go back to home">
+        <span class="nav-icon">←</span> Home
+      </a>
+      <div class="nav-search">
+        <input
+          id="navSearchInput"
+          type="text"
+          placeholder="Search another book..."
+          class="nav-search-input"
+          aria-label="Search for another book"
+        >
+        <button id="navSearchBtn" class="nav-search-btn" aria-label="Search">
+          Search
+        </button>
+      </div>
+    </nav>
+
+    <!-- Book detail content -->
+    <section class="section book-detail-section">
+      <div class="container">
+        <div class="book-detail-card">
+          <div class="book-cover-container">
+            <div class="book-cover-placeholder">
+              <span class="cover-icon">📖</span>
+            </div>
+          </div>
+
+          <div class="book-info">
+            <h1 id="bookTitle" class="book-detail-title">Book Title</h1>
+            <p id="bookAuthor" class="book-detail-author">by Author Name</p>
+            <p id="bookYear" class="book-detail-year">Published: 2000</p>
+
+            <div class="book-description">
+              <h2 class="description-heading">Description</h2>
+              <p id="bookDescription" class="description-text">
+                This is a wonderful book that tells an amazing story. The narrative weaves through
+                complex characters and intricate plot lines, creating a compelling read that captures
+                the imagination and transports readers to another world.
+              </p>
+            </div>
+
+            <div class="book-actions">
+              <button class="action-btn primary-action">Add to My Collection</button>
+              <button class="action-btn secondary-action">Mark as Read</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="book.js"></script>
+  </body>
+</html>
